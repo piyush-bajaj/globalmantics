@@ -8,7 +8,7 @@ const requestListener = function ( req, res ) {
 	fs.readFile( "./houses.json" )
 		.then( ( contents ) => {
 			res.setHeader( "Content-Type", "application/json" );
-			res.setHeader( "Access-Control-Allow-Origin", "*" )
+			res.setHeader( "Access-Control-Allow-Origin", "*" );
 			res.writeHead( 200 );
 			res.end( contents );
 		} )
